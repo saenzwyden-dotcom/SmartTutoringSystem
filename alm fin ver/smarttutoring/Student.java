@@ -81,7 +81,8 @@ public class Student extends User {
             return;
         }
 
-        double score = quiz.startQuiz(scanner);
+        // Passed getFullName() so the quiz displays personalized results
+        double score = quiz.startQuiz(scanner, getFullName());
         progressTracker.recordScore(score);
     }
 
@@ -103,4 +104,3 @@ public class Student extends User {
         return 1;
     }
 }
-
